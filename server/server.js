@@ -10,7 +10,7 @@ var port = process.env.PORT || 8080;
 
 var router = express.Router();
 
-mongoose.connect('mongodb://localhost/plants',function(err){
+mongoose.connect('mongodb://104.236.241.151:27017/plants',function(err){
     if(err) {
         console.log('connection error', err);
     } else {
