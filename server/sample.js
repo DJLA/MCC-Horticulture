@@ -1,64 +1,15 @@
+var loremIpsum = require('lorem-ipsum')
+var output = loremIpsum({
+    count: Math.floor((Math.random() * 3) + 1)       // Number of words, sentences, or paragraphs to generate. 
+  , units: 'words'            // Generate words, sentences, or paragraphs. 
+  , format: 'plain'               // Plain text or html 
+  , random: Math.random           // A PRNG function. Uses Math.random by default 
+});
+
+console.log(output);
+  
 module.exports = function(){
     var Plant = require('./routes/plants/models/plant.js');
-    
-    var dataArray = [
-        {
-            name:"Plant One",
-            description:"Example Description One"
-        },
-        {
-            name:"Plant Two",
-            description:"Example Description Two"
-        },
-        {
-            name:"Plant Three",
-            description:"Example Description Three"
-        },
-        {
-            name:"Plant Four",
-            description:"Example Description Four"
-        },
-        {
-            name:"Plant Five",
-            description:"Example Description Five"
-        },
-        {
-            name:"Plant Six",
-            description:"Example Description Six"
-        },
-        {
-            name:"Plant Seven",
-            description:"Example Description Seven"
-        },        
-        {
-            name:"Plant Eight",
-            description:"Example Description Eight"
-        },
-        {
-            name:"Plant Nine",
-            description:"Example Description Nine"
-        },
-        {
-            name:"Plant Ten",
-            description:"Example Description Ten"
-        },
-        {
-            name:"Plant Eleven",
-            description:"Example Description Eleven"
-        },
-        {
-            name:"Plant Twelve",
-            description:"Example Description Twelve"
-        },
-        {
-            name:"Plant Thirteen",
-            description:"Example Description Thirteen"
-        },
-        {
-            name:"Plant Fourteen",
-            description:"Example Description Fourteen"
-        },         
-    ]
     
     Plant.find(function(err,docs){
         for(var i in docs){
@@ -67,8 +18,21 @@ module.exports = function(){
         }
     });
     
-    for(var i in dataArray){
-        var plant = dataArray[i];
+    for(var i in 20){
+        var plant = {
+                name: loremIpsum({
+                    count: Math.floor((Math.random() * 3) + 1)       // Number of words, sentences, or paragraphs to generate. 
+                  , units: 'words'            // Generate words, sentences, or paragraphs. 
+                  , format: 'plain'               // Plain text or html 
+                  , random: Math.random           // A PRNG function. Uses Math.random by default                 
+                }),
+                description:loremIpsum({
+                    count: Math.floor((Math.random() * 2) + 1)       // Number of words, sentences, or paragraphs to generate. 
+                  , units: 'paragraphs'            // Generate words, sentences, or paragraphs. 
+                  , format: 'plain'               // Plain text or html 
+                  , random: Math.random           // A PRNG function. Uses Math.random by default                            
+                })
+        }
         Plant.create(plant, function(err, plant) {
             if (err){
                 console.log("error")
