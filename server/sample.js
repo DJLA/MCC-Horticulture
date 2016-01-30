@@ -5,7 +5,31 @@ module.exports = function(){
         {
             name:"Plant One",
             description:"Example Description One"
-        }     
+        },
+        {
+            name:"Plant Two",
+            description:"Example Description Two"
+        },
+        {
+            name:"Plant Three",
+            description:"Example Description Three"
+        },
+        {
+            name:"Plant Four",
+            description:"Example Description Four"
+        },
+        {
+            name:"Plant Five",
+            description:"Example Description Five"
+        },
+        {
+            name:"Plant Six",
+            description:"Example Description Six"
+        },
+        {
+            name:"Plant Seven",
+            description:"Example Description Seven"
+        },        
     ]
     
     Plant.find(function(err,docs){
