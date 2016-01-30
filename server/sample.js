@@ -30,6 +30,34 @@ module.exports = function(){
             name:"Plant Seven",
             description:"Example Description Seven"
         },        
+        {
+            name:"Plant Eight",
+            description:"Example Description Eight"
+        },
+        {
+            name:"Plant Nine",
+            description:"Example Description Nine"
+        },
+        {
+            name:"Plant Ten",
+            description:"Example Description Ten"
+        },
+        {
+            name:"Plant Eleven",
+            description:"Example Description Eleven"
+        },
+        {
+            name:"Plant Twelve",
+            description:"Example Description Twelve"
+        },
+        {
+            name:"Plant Thirteen",
+            description:"Example Description Thirteen"
+        },
+        {
+            name:"Plant Fourteen",
+            description:"Example Description Fourteen"
+        },         
     ]
     
     Plant.find(function(err,docs){
