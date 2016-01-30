@@ -19,6 +19,7 @@ mongoose.connect('mongodb://104.236.241.151:27017/plants',function(err){
 })
 
 require("./routes/routes.js")(app);
+require("./sample.js")();
 
 app.listen(port);
 console.log("Running on port " + port);
