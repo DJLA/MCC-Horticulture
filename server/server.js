@@ -11,6 +11,13 @@ app.use(function(req, res, next) {
 });
 
 
+app.options(/\.*/, function (req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+        res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
+        res.send(200);
+    });
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
