@@ -18,7 +18,7 @@ module.exports = function(){
         }
     });
     
-    for(var i in 20){
+    for(var i=0;i<20;i++){
         var plant = {
                 name: loremIpsum({
                     count: Math.floor((Math.random() * 3) + 1)       // Number of words, sentences, or paragraphs to generate. 
