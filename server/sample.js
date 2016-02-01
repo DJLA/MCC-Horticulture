@@ -31,7 +31,19 @@ module.exports = function(){
                   , units: 'paragraphs'            // Generate words, sentences, or paragraphs. 
                   , format: 'plain'               // Plain text or html 
                   , random: Math.random           // A PRNG function. Uses Math.random by default                            
-                })
+                }),
+                family: loremIpsum({
+                    count: Math.floor((Math.random() * 5) + 1)       // Number of words, sentences, or paragraphs to generate. 
+                  , units: 'words'            // Generate words, sentences, or paragraphs. 
+                  , format: 'plain'               // Plain text or html 
+                  , random: Math.random           // A PRNG function. Uses Math.random by default                 
+                }),
+                zone: loremIpsum({
+                    count: Math.floor((Math.random() * 2) + 1)       // Number of words, sentences, or paragraphs to generate. 
+                  , units: 'words'            // Generate words, sentences, or paragraphs. 
+                  , format: 'plain'               // Plain text or html 
+                  , random: Math.random           // A PRNG function. Uses Math.random by default                 
+                }),                 
         }
         Plant.create(plant, function(err, plant) {
             if (err){
