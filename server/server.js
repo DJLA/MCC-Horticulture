@@ -19,7 +19,7 @@ var port = process.env.PORT || 3000;
 
 var router = express.Router();
 
-mongoose.connect('mongodb://104.236.241.151:27017/plants',function(err){
+mongoose.connect('mongodb://198.199.79.22:27017/plants',function(err){
     if(err) {
         console.log('connection error', err);
     } else {
